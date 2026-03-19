@@ -31,28 +31,28 @@
             label1 = new Label();
             txtName = new TextBox();
             grpIngredients = new GroupBox();
-            chbPepperoni = new CheckBox();
-            chbPineapple = new CheckBox();
-            chbSausage = new CheckBox();
-            chbBacon = new CheckBox();
             chbTomatoes = new CheckBox();
             chbMushrooms = new CheckBox();
             chbPeppers = new CheckBox();
             chbOlives = new CheckBox();
+            chbSausage = new CheckBox();
+            chbBacon = new CheckBox();
+            chbPineapple = new CheckBox();
+            chbPepperoni = new CheckBox();
             label2 = new Label();
             lsbStrangeAddOns = new ListBox();
             grpCrust = new GroupBox();
-            rdoThinCrust = new RadioButton();
-            rdoDeepDish = new RadioButton();
             rdoGlutenFree = new RadioButton();
             rdoStuffedCrust = new RadioButton();
+            rdoDeepDish = new RadioButton();
+            rdoThinCrust = new RadioButton();
             grpExtraGoodies = new GroupBox();
-            hsbSauce = new HScrollBar();
-            hsbCheese = new HScrollBar();
-            label3 = new Label();
-            label4 = new Label();
-            lblSauce = new Label();
             lblCheese = new Label();
+            lblSauce = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            hsbCheese = new HScrollBar();
+            hsbSauce = new HScrollBar();
             label5 = new Label();
             dptDeliveryTime = new DateTimePicker();
             label6 = new Label();
@@ -84,6 +84,7 @@
             txtName.Name = "txtName";
             txtName.Size = new Size(159, 26);
             txtName.TabIndex = 1;
+            txtName.Leave += this.TxtNameLeaveEH;
             // 
             // grpIngredients
             // 
@@ -104,50 +105,6 @@
             grpIngredients.TabIndex = 2;
             grpIngredients.TabStop = false;
             grpIngredients.Text = "Ingredients";
-            // 
-            // chbPepperoni
-            // 
-            chbPepperoni.AutoSize = true;
-            chbPepperoni.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            chbPepperoni.Location = new Point(9, 27);
-            chbPepperoni.Name = "chbPepperoni";
-            chbPepperoni.Size = new Size(99, 22);
-            chbPepperoni.TabIndex = 0;
-            chbPepperoni.Text = "Pepperoni";
-            chbPepperoni.UseVisualStyleBackColor = true;
-            // 
-            // chbPineapple
-            // 
-            chbPineapple.AutoSize = true;
-            chbPineapple.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            chbPineapple.Location = new Point(131, 27);
-            chbPineapple.Name = "chbPineapple";
-            chbPineapple.Size = new Size(96, 22);
-            chbPineapple.TabIndex = 1;
-            chbPineapple.Text = "Pineapple";
-            chbPineapple.UseVisualStyleBackColor = true;
-            // 
-            // chbSausage
-            // 
-            chbSausage.AutoSize = true;
-            chbSausage.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            chbSausage.Location = new Point(131, 55);
-            chbSausage.Name = "chbSausage";
-            chbSausage.Size = new Size(84, 22);
-            chbSausage.TabIndex = 3;
-            chbSausage.Text = "Sausage";
-            chbSausage.UseVisualStyleBackColor = true;
-            // 
-            // chbBacon
-            // 
-            chbBacon.AutoSize = true;
-            chbBacon.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            chbBacon.Location = new Point(9, 55);
-            chbBacon.Name = "chbBacon";
-            chbBacon.Size = new Size(69, 22);
-            chbBacon.TabIndex = 2;
-            chbBacon.Text = "Bacon";
-            chbBacon.UseVisualStyleBackColor = true;
             // 
             // chbTomatoes
             // 
@@ -193,6 +150,50 @@
             chbOlives.Text = "Olives";
             chbOlives.UseVisualStyleBackColor = true;
             // 
+            // chbSausage
+            // 
+            chbSausage.AutoSize = true;
+            chbSausage.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chbSausage.Location = new Point(131, 55);
+            chbSausage.Name = "chbSausage";
+            chbSausage.Size = new Size(84, 22);
+            chbSausage.TabIndex = 3;
+            chbSausage.Text = "Sausage";
+            chbSausage.UseVisualStyleBackColor = true;
+            // 
+            // chbBacon
+            // 
+            chbBacon.AutoSize = true;
+            chbBacon.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chbBacon.Location = new Point(9, 55);
+            chbBacon.Name = "chbBacon";
+            chbBacon.Size = new Size(69, 22);
+            chbBacon.TabIndex = 2;
+            chbBacon.Text = "Bacon";
+            chbBacon.UseVisualStyleBackColor = true;
+            // 
+            // chbPineapple
+            // 
+            chbPineapple.AutoSize = true;
+            chbPineapple.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chbPineapple.Location = new Point(131, 27);
+            chbPineapple.Name = "chbPineapple";
+            chbPineapple.Size = new Size(96, 22);
+            chbPineapple.TabIndex = 1;
+            chbPineapple.Text = "Pineapple";
+            chbPineapple.UseVisualStyleBackColor = true;
+            // 
+            // chbPepperoni
+            // 
+            chbPepperoni.AutoSize = true;
+            chbPepperoni.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chbPepperoni.Location = new Point(9, 27);
+            chbPepperoni.Name = "chbPepperoni";
+            chbPepperoni.Size = new Size(99, 22);
+            chbPepperoni.TabIndex = 0;
+            chbPepperoni.Text = "Pepperoni";
+            chbPepperoni.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -226,30 +227,6 @@
             grpCrust.TabStop = false;
             grpCrust.Text = "Crust";
             // 
-            // rdoThinCrust
-            // 
-            rdoThinCrust.AutoSize = true;
-            rdoThinCrust.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            rdoThinCrust.Location = new Point(15, 25);
-            rdoThinCrust.Name = "rdoThinCrust";
-            rdoThinCrust.Size = new Size(102, 22);
-            rdoThinCrust.TabIndex = 0;
-            rdoThinCrust.TabStop = true;
-            rdoThinCrust.Text = "Thin Crust";
-            rdoThinCrust.UseVisualStyleBackColor = true;
-            // 
-            // rdoDeepDish
-            // 
-            rdoDeepDish.AutoSize = true;
-            rdoDeepDish.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            rdoDeepDish.Location = new Point(15, 53);
-            rdoDeepDish.Name = "rdoDeepDish";
-            rdoDeepDish.Size = new Size(97, 22);
-            rdoDeepDish.TabIndex = 1;
-            rdoDeepDish.TabStop = true;
-            rdoDeepDish.Text = "Deep Dish";
-            rdoDeepDish.UseVisualStyleBackColor = true;
-            // 
             // rdoGlutenFree
             // 
             rdoGlutenFree.AutoSize = true;
@@ -274,6 +251,30 @@
             rdoStuffedCrust.Text = "Stuffed Crust";
             rdoStuffedCrust.UseVisualStyleBackColor = true;
             // 
+            // rdoDeepDish
+            // 
+            rdoDeepDish.AutoSize = true;
+            rdoDeepDish.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rdoDeepDish.Location = new Point(15, 53);
+            rdoDeepDish.Name = "rdoDeepDish";
+            rdoDeepDish.Size = new Size(97, 22);
+            rdoDeepDish.TabIndex = 1;
+            rdoDeepDish.TabStop = true;
+            rdoDeepDish.Text = "Deep Dish";
+            rdoDeepDish.UseVisualStyleBackColor = true;
+            // 
+            // rdoThinCrust
+            // 
+            rdoThinCrust.AutoSize = true;
+            rdoThinCrust.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rdoThinCrust.Location = new Point(15, 25);
+            rdoThinCrust.Name = "rdoThinCrust";
+            rdoThinCrust.Size = new Size(102, 22);
+            rdoThinCrust.TabIndex = 0;
+            rdoThinCrust.TabStop = true;
+            rdoThinCrust.Text = "Thin Crust";
+            rdoThinCrust.UseVisualStyleBackColor = true;
+            // 
             // grpExtraGoodies
             // 
             grpExtraGoodies.Controls.Add(lblCheese);
@@ -289,39 +290,16 @@
             grpExtraGoodies.TabStop = false;
             grpExtraGoodies.Text = "Extra Goodies";
             // 
-            // hsbSauce
+            // lblCheese
             // 
-            hsbSauce.Location = new Point(18, 61);
-            hsbSauce.Name = "hsbSauce";
-            hsbSauce.Size = new Size(99, 20);
-            hsbSauce.TabIndex = 0;
-            // 
-            // hsbCheese
-            // 
-            hsbCheese.Location = new Point(18, 125);
-            hsbCheese.Name = "hsbCheese";
-            hsbCheese.Size = new Size(99, 20);
-            hsbCheese.TabIndex = 1;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(18, 33);
-            label3.Name = "label3";
-            label3.Size = new Size(127, 18);
-            label3.TabIndex = 2;
-            label3.Text = "Amount of Sauce";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(18, 98);
-            label4.Name = "label4";
-            label4.Size = new Size(133, 18);
-            label4.TabIndex = 3;
-            label4.Text = "Amount of cheese";
+            lblCheese.AutoSize = true;
+            lblCheese.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCheese.Location = new Point(151, 98);
+            lblCheese.Name = "lblCheese";
+            lblCheese.Size = new Size(28, 18);
+            lblCheese.TabIndex = 5;
+            lblCheese.Text = "00";
+            lblCheese.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblSauce
             // 
@@ -334,16 +312,39 @@
             lblSauce.Text = "00";
             lblSauce.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // lblCheese
+            // label4
             // 
-            lblCheese.AutoSize = true;
-            lblCheese.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCheese.Location = new Point(151, 98);
-            lblCheese.Name = "lblCheese";
-            lblCheese.Size = new Size(28, 18);
-            lblCheese.TabIndex = 5;
-            lblCheese.Text = "00";
-            lblCheese.TextAlign = ContentAlignment.MiddleLeft;
+            label4.AutoSize = true;
+            label4.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(18, 98);
+            label4.Name = "label4";
+            label4.Size = new Size(133, 18);
+            label4.TabIndex = 3;
+            label4.Text = "Amount of cheese";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(18, 33);
+            label3.Name = "label3";
+            label3.Size = new Size(127, 18);
+            label3.TabIndex = 2;
+            label3.Text = "Amount of Sauce";
+            // 
+            // hsbCheese
+            // 
+            hsbCheese.Location = new Point(18, 125);
+            hsbCheese.Name = "hsbCheese";
+            hsbCheese.Size = new Size(99, 20);
+            hsbCheese.TabIndex = 1;
+            // 
+            // hsbSauce
+            // 
+            hsbSauce.Location = new Point(18, 61);
+            hsbSauce.Name = "hsbSauce";
+            hsbSauce.Size = new Size(99, 20);
+            hsbSauce.TabIndex = 0;
             // 
             // label5
             // 
