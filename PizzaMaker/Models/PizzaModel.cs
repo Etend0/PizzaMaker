@@ -19,7 +19,7 @@ namespace PizzaMaker.Models
         public List<string> Ingredients { get; set; }
         public List<string> StrangeAddOns { get; set; }
         public string Crust { get; set; }
-        public int SauseQty { get; set; }
+        public int SauceQty { get; set; }
         public int CheeseQty { get; set; }
         public DateTime DeliveryTime { get; set; }
         public Color PizzaBoxColor { get; set; }
@@ -35,7 +35,7 @@ namespace PizzaMaker.Models
             Ingredients = new List<string>();
             StrangeAddOns = new List<string>();
             Crust = "Unknown";
-            SauseQty = 0;
+            SauceQty = 0;
             CheeseQty = 0;
             DeliveryTime = DateTime.Now;
             PizzaBoxColor = Color.White;

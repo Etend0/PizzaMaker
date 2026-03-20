@@ -54,7 +54,7 @@
             hsbCheese = new HScrollBar();
             hsbSauce = new HScrollBar();
             label5 = new Label();
-            dptDeliveryTime = new DateTimePicker();
+            dtpDeliveryTime = new DateTimePicker();
             label6 = new Label();
             picPizzaBoxColor = new PictureBox();
             label7 = new Label();
@@ -351,6 +351,7 @@
             hsbCheese.Name = "hsbCheese";
             hsbCheese.Size = new Size(99, 20);
             hsbCheese.TabIndex = 1;
+            hsbCheese.ValueChanged += HsbExtraGoodiesValueChangedEH;
             // 
             // hsbSauce
             // 
@@ -358,6 +359,7 @@
             hsbSauce.Name = "hsbSauce";
             hsbSauce.Size = new Size(99, 20);
             hsbSauce.TabIndex = 0;
+            hsbSauce.ValueChanged += HsbExtraGoodiesValueChangedEH;
             // 
             // label5
             // 
@@ -368,14 +370,17 @@
             label5.TabIndex = 7;
             label5.Text = "Delivery Time";
             // 
-            // dptDeliveryTime
+            // dtpDeliveryTime
             // 
-            dptDeliveryTime.CalendarFont = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dptDeliveryTime.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dptDeliveryTime.Location = new Point(327, 48);
-            dptDeliveryTime.Name = "dptDeliveryTime";
-            dptDeliveryTime.Size = new Size(311, 26);
-            dptDeliveryTime.TabIndex = 8;
+            dtpDeliveryTime.CalendarFont = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDeliveryTime.CustomFormat = "MM/dd/yyyy hh:mm";
+            dtpDeliveryTime.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dtpDeliveryTime.Format = DateTimePickerFormat.Custom;
+            dtpDeliveryTime.Location = new Point(327, 48);
+            dtpDeliveryTime.Name = "dtpDeliveryTime";
+            dtpDeliveryTime.Size = new Size(311, 26);
+            dtpDeliveryTime.TabIndex = 8;
+            dtpDeliveryTime.ValueChanged += DtpDeliveryTimeValueChangedEH;
             // 
             // label6
             // 
@@ -394,6 +399,7 @@
             picPizzaBoxColor.Size = new Size(230, 71);
             picPizzaBoxColor.TabIndex = 10;
             picPizzaBoxColor.TabStop = false;
+            picPizzaBoxColor.Click += PicPizzaBoxColorClickEH;
             // 
             // label7
             // 
@@ -424,6 +430,7 @@
             btnResetForm.TabIndex = 13;
             btnResetForm.Text = "Reset Form";
             btnResetForm.UseVisualStyleBackColor = true;
+            btnResetForm.Click += this.BtnResetFormClickEH;
             // 
             // btnCreatePizza
             // 
@@ -446,7 +453,7 @@
             Controls.Add(label7);
             Controls.Add(picPizzaBoxColor);
             Controls.Add(label6);
-            Controls.Add(dptDeliveryTime);
+            Controls.Add(dtpDeliveryTime);
             Controls.Add(label5);
             Controls.Add(grpExtraGoodies);
             Controls.Add(grpCrust);
@@ -498,7 +505,7 @@
         private Label lblCheese;
         private Label lblSauce;
         private Label label5;
-        private DateTimePicker dptDeliveryTime;
+        private DateTimePicker dtpDeliveryTime;
         private Label label6;
         private PictureBox picPizzaBoxColor;
         private Label label7;
