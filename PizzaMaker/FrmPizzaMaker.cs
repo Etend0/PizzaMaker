@@ -1,4 +1,3 @@
-
 /*
  * Elijah Hodge
  * CST - 250
@@ -228,7 +227,7 @@ namespace PizzaMaker
         {
             // Set the pizza to a new instance
             _pizza = new PizzaModel();
-            // Reset thecontrols of the form
+            // Reset the controls of the form
             ResetControls(this);
             // Update the price of the pizza
             UpdatePrice();
