@@ -430,7 +430,7 @@
             btnResetForm.TabIndex = 13;
             btnResetForm.Text = "Reset Form";
             btnResetForm.UseVisualStyleBackColor = true;
-            btnResetForm.Click += this.BtnResetFormClickEH;
+            btnResetForm.Click += BtnResetFormClickEH;
             // 
             // btnCreatePizza
             // 
@@ -441,6 +441,7 @@
             btnCreatePizza.TabIndex = 14;
             btnCreatePizza.Text = "Create Pizza";
             btnCreatePizza.UseVisualStyleBackColor = true;
+            btnCreatePizza.Click += this.BtnCreatePizzaClickEH;
             // 
             // FrmPizzaMaker
             // 

@@ -6,7 +6,9 @@
  * Activity 4
  * */
 
-using PizzaMaker.Models;
+using PizzaMakerClassLibrary.Models;
+using PizzaMakerClassLibrary.Services.BusinessLogicLayer;
+using System.Drawing.Text;
 
 namespace PizzaMaker
 {
@@ -14,6 +16,7 @@ namespace PizzaMaker
     {
         // Class level variable declarations
         private PizzaModel _pizza;
+        private PizzaLogic _pizzaLogic;
 
         /// <summary>
         /// Default constructor for FrmPizzaMaker
@@ -300,5 +303,27 @@ namespace PizzaMaker
                 }
             }
         } // End of ResetControls method
+
+        /// <summary>
+        /// Click event handler for btnCreatePizza
+        /// </summary>
+        /// <param name="sener"></param>
+        /// <param name="e"></param>
+        public void BtnCreatePizzaClickEH(object sener, EventArgs e)
+        {
+            // Declare nd initialize 
+            bool isValidPizza = false;
+            int pizzasInOrder = -1;
+
+            // Use the pizzaLogic to call AddPizzaToOrder
+            (isValidPizza, pizzasInOrder) = _pizzaLogic.AddPizzaToOrder(_pizza);
+
+            // Check if the pizza was valid
+            if (isValidPizza)
+            {
+                // Reset the form
+                ResetForm();
+            }
+        }
     }
 }
