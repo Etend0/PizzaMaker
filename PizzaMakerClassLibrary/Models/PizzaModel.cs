@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 /*
@@ -10,9 +11,9 @@ using System.Text;
  * Activity 4
  * */
 
-namespace PizzaMaker.Models
+namespace PizzaMakerClassLibrary.Models
 {
-    internal class PizzaModel
+    public class PizzaModel
     {
         // Class Properties
         public string ClientName { get; set; }
