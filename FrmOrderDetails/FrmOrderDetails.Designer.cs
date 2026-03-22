@@ -1,6 +1,6 @@
 ﻿namespace FrmOrderDetails
 {
-    partial class Form1
+    partial class FrmOrderDetails
     {
         /// <summary>
         ///  Required designer variable.
@@ -34,19 +34,19 @@
             // lblOrderDetails
             // 
             lblOrderDetails.AutoSize = true;
-            lblOrderDetails.Location = new Point(50, 55);
+            lblOrderDetails.Location = new Point(58, 67);
             lblOrderDetails.Name = "lblOrderDetails";
             lblOrderDetails.Size = new Size(75, 15);
             lblOrderDetails.TabIndex = 0;
             lblOrderDetails.Text = "Order Details";
             // 
-            // Form1
+            // FrmOrderDetails
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(lblOrderDetails);
-            Name = "Form1";
+            Name = "FrmOrderDetails";
             Text = "Pizza Order Details";
             ResumeLayout(false);
             PerformLayout();

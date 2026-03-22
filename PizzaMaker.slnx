@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="FrmOrderDetails/FrmOrderDetails.csproj" />
+  <Project Path="FrmOrderDetails/FrmOrderDetails.csproj" Id="70126aaf-2445-4126-acfc-9ed8c0e9674f" />
   <Project Path="PizzaMaker/PizzaMaker.csproj" />
   <Project Path="PizzaMakerClassLibrary/PizzaMakerClassLibrary.csproj" />
 </Solution>
