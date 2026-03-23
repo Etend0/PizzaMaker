@@ -48,5 +48,53 @@ namespace PizzaMakerClassLibrary.Services.DataAccessLayer
             // Return the pizzaOrder list
             return _pizzaOrder;
         }
+
+        /// <summary>
+        /// Write the pizza order to a text file
+        /// </summary>
+        /// <returns></returns>
+        public bool WriteOrderToFile()
+        {
+            // Declatre and initialize
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data");
+            string pizzaString = "";
+
+            // Check if the directory exists
+            if (!Directory.Exists(filePath))
+            {
+                Directory.CreateDirectory(filePath);
+            }
+
+            // Set up a try-catch for the file writer
+            try
+            {
+                // Create a using statement for the StreamWriter
+                using (StreamWriter streamWriter = new StreamWriter(Path.Combine(filePath, "PizzaOrder.txt")))
+                {
+                    // Loop through the pizza order list
+                    foreach (PizzaModel pizza in _pizzaOrder)
+                    {
+                        pizzaString =
+                            $"Name: {pizza.ClientName}\n" +
+                            $"Ingredients: {string.Join(", ", pizza.Ingredients)}\n" +
+                            $"Strange Add-Ons: {string.Join(", ", pizza.StrangeAddOns)}\n" +
+                            $"Crust: {pizza.Crust}\n" +
+                            $"Sauce: {pizza.SauceQty}\n" +
+                            $"Cheese: {pizza.CheeseQty}\n" +
+                            $"Delivery Time: {pizza.DeliveryTime}\n" +
+                            $"Pizza Box Color: {pizza.PizzaBoxColor.Name}\n" +
+                            $"Price: ${pizza.Price}\n\n";
+                        streamWriter.WriteLine(pizzaString);
+                    }
+                }
+                // Return true
+                return true;
+            }
+            catch
+            {
+                // Return false
+                return false;
+            }
+        }
     }
 }
