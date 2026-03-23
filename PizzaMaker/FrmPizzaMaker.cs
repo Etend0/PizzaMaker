@@ -9,6 +9,7 @@
 using PizzaMakerClassLibrary.Models;
 using PizzaMakerClassLibrary.Services.BusinessLogicLayer;
 using System.Drawing.Text;
+using FrmOrderDetails;
 
 namespace PizzaMaker
 {
@@ -335,6 +336,25 @@ namespace PizzaMaker
                 // Show a failure message to the user
                 MessageBox.Show("Your pizza order is not complete.");
             }
+        }
+
+        /// <summary>
+        /// Click event handler for btnSeeFullOrder
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnSeeFullOrderClickEH(object sender, EventArgs e)
+        {
+            // Declare and initialize
+            List<PizzaModel> pizzaList;
+            // Get the pizza list from pizzaLogic
+            pizzaList = _pizzaLogic.GetPizzaOrder();
+            // Create a new form with the pizza list
+            FrmOrderDetails.FrmOrderDetails frmOrderDetails = new FrmOrderDetails.FrmOrderDetails(pizzaList, _pizzaLogic);
+            // Update the label with the pizza order
+            frmOrderDetails.DisplayPizzas();
+            // Show the form
+            frmOrderDetails.ShowDialog();
         }
     }
 }
