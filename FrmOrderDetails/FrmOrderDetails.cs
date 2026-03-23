@@ -17,6 +17,11 @@ namespace FrmOrderDetails
         private List<PizzaModel> _pizzaOrder;
         private PizzaLogic _pizzaLogic;
 
+        /// <summary>
+        /// Parameterized constroctor for FrmOrderDetails
+        /// </summary>
+        /// <param name="_pizzaOrderList"></param>
+        /// <param name="pizzaBusinessLogic"></param>
         public FrmOrderDetails(List<PizzaModel> _pizzaOrderList, PizzaLogic pizzaBusinessLogic)
         {
             // Initialize the form
@@ -72,6 +77,17 @@ namespace FrmOrderDetails
                 // Show a failure message to the user
                 MessageBox.Show("An error occurred while trying to save your order. Please try again later.");
             }
+        }
+
+        /// <summary>
+        /// Close the form to return to the pizza order form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnCloseClickEH(object sender, EventArgs e)
+        {
+            // Close the form
+            this.Close();
         }
     }
 }

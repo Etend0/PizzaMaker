@@ -30,6 +30,7 @@
         {
             lblOrderDetails = new Label();
             btnSaveOrder = new Button();
+            btnClose = new Button();
             SuspendLayout();
             // 
             // lblOrderDetails
@@ -51,11 +52,22 @@
             btnSaveOrder.UseVisualStyleBackColor = true;
             btnSaveOrder.Click += BtnSaveOrderClickEH;
             // 
+            // btnClose
+            // 
+            btnClose.Location = new Point(690, 363);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(75, 23);
+            btnClose.TabIndex = 2;
+            btnClose.Text = "Close";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += BtnCloseClickEH;
+            // 
             // FrmOrderDetails
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnClose);
             Controls.Add(btnSaveOrder);
             Controls.Add(lblOrderDetails);
             Name = "FrmOrderDetails";
@@ -68,5 +80,6 @@
 
         private Label lblOrderDetails;
         private Button btnSaveOrder;
+        private Button btnClose;
     }
 }
