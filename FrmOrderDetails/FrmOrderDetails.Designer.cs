@@ -49,6 +49,7 @@
             btnSaveOrder.TabIndex = 1;
             btnSaveOrder.Text = "Save Order";
             btnSaveOrder.UseVisualStyleBackColor = true;
+            btnSaveOrder.Click += BtnSaveOrderClickEH;
             // 
             // FrmOrderDetails
             // 
