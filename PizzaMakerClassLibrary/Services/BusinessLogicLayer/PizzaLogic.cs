@@ -39,11 +39,23 @@ namespace PizzaMakerClassLibrary.Services.BusinessLogicLayer
         {
             // Declare and initialize
             int pizzas = -1;
+            bool isValid = false;
 
-            // Call the DAO AddPizzaToOrder
-            pizzas = _pizzaDAO.AddPizzaToOrder(newPizza);
+            // Validate the pizza to make sure it has a client name, crust, at least one ingredient, and some sauce and cheese
+            if (!string.IsNullOrEmpty(newPizza.ClientName) && newPizza.ClientName != "Unkown"
+                && !string.IsNullOrEmpty(newPizza.Crust) && newPizza.Crust != "Unknown"
+                && newPizza.Ingredients.Count > 0
+                && newPizza.SauceQty > 0
+                && newPizza.CheeseQty > 0)
+            {
+                // Set isValid to true
+                isValid = true;
+                // Call the DAO AddPizzaToOrder
+                pizzas = _pizzaDAO.AddPizzaToOrder(newPizza);
+            }
+
             // Return the isValid and pizzas variables
-            return (true, pizzas);
+            return (isValid, pizzas);
         }
 
         /// <summary>

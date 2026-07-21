@@ -87,5 +87,16 @@ namespace PizzaMaker
                 MessageBox.Show("An error occurred while trying to save your order. Please try again later.");
             }
         }
+
+        /// <summary>
+        /// Close the form to return to the pizza order form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnBackClickEH(object sender, EventArgs e)
+        {
+            // Close the form
+            this.Close();
+        }
     }
 }

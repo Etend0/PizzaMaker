@@ -30,6 +30,7 @@
         {
             lblOrderDetails = new Label();
             btnSaveOrder = new Button();
+            btnBack = new Button();
             SuspendLayout();
             // 
             // lblOrderDetails
@@ -51,11 +52,22 @@
             btnSaveOrder.UseVisualStyleBackColor = true;
             btnSaveOrder.Click += BtnSaveOrderClickEH;
             // 
+            // btnBack
+            // 
+            btnBack.Location = new Point(713, 415);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(75, 23);
+            btnBack.TabIndex = 2;
+            btnBack.Text = "Back";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += BtnBackClickEH;
+            // 
             // FrmOrderDetails
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnBack);
             Controls.Add(btnSaveOrder);
             Controls.Add(lblOrderDetails);
             Name = "FrmOrderDetails";
@@ -68,5 +80,6 @@
 
         private Label lblOrderDetails;
         private Button btnSaveOrder;
+        private Button btnBack;
     }
 }
