@@ -350,6 +350,7 @@
             hsbCheese.Name = "hsbCheese";
             hsbCheese.Size = new Size(307, 17);
             hsbCheese.TabIndex = 1;
+            hsbCheese.ValueChanged += HsbExtraGoodiesValueChangedEH;
             // 
             // hsbSauce
             // 
@@ -357,6 +358,7 @@
             hsbSauce.Name = "hsbSauce";
             hsbSauce.Size = new Size(307, 17);
             hsbSauce.TabIndex = 0;
+            hsbSauce.ValueChanged += HsbExtraGoodiesValueChangedEH;
             // 
             // label5
             // 
@@ -370,10 +372,13 @@
             // 
             // dtpDeliveryTime
             // 
+            dtpDeliveryTime.CustomFormat = "MM/dd/yyyy hh:mm";
+            dtpDeliveryTime.Format = DateTimePickerFormat.Custom;
             dtpDeliveryTime.Location = new Point(336, 40);
             dtpDeliveryTime.Name = "dtpDeliveryTime";
-            dtpDeliveryTime.Size = new Size(323, 26);
+            dtpDeliveryTime.Size = new Size(242, 26);
             dtpDeliveryTime.TabIndex = 8;
+            dtpDeliveryTime.ValueChanged += DtpDeliveryTimeValueChangedEH;
             // 
             // label6
             // 
@@ -437,7 +442,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(692, 508);
+            ClientSize = new Size(692, 599);
             Controls.Add(btnCreatePizza);
             Controls.Add(btnResetForm);
             Controls.Add(lblPizzaPrice);
