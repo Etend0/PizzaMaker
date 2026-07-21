@@ -398,6 +398,7 @@
             picPizzaBoxColor.Size = new Size(242, 78);
             picPizzaBoxColor.TabIndex = 10;
             picPizzaBoxColor.TabStop = false;
+            picPizzaBoxColor.Click += PicPizzaBoxColorClickEH;
             // 
             // label7
             // 
@@ -428,6 +429,7 @@
             btnResetForm.TabIndex = 13;
             btnResetForm.Text = "Reset Form";
             btnResetForm.UseVisualStyleBackColor = true;
+            btnResetForm.Click += BtnResetFormClickEH;
             // 
             // btnCreatePizza
             // 
