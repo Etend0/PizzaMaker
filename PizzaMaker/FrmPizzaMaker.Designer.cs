@@ -112,6 +112,7 @@
             chbTomatoes.TabIndex = 7;
             chbTomatoes.Text = "Tomatoes";
             chbTomatoes.UseVisualStyleBackColor = true;
+            chbTomatoes.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbMushrooms
             // 
@@ -123,6 +124,7 @@
             chbMushrooms.TabIndex = 6;
             chbMushrooms.Text = "Mushrooms";
             chbMushrooms.UseVisualStyleBackColor = true;
+            chbMushrooms.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbPeppers
             // 
@@ -134,6 +136,7 @@
             chbPeppers.TabIndex = 5;
             chbPeppers.Text = "Peppers";
             chbPeppers.UseVisualStyleBackColor = true;
+            chbPeppers.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbOlives
             // 
@@ -145,6 +148,7 @@
             chbOlives.TabIndex = 4;
             chbOlives.Text = "Olives";
             chbOlives.UseVisualStyleBackColor = true;
+            chbOlives.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbSausage
             // 
@@ -156,6 +160,7 @@
             chbSausage.TabIndex = 3;
             chbSausage.Text = "Sausage";
             chbSausage.UseVisualStyleBackColor = true;
+            chbSausage.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbBacon
             // 
@@ -167,6 +172,7 @@
             chbBacon.TabIndex = 2;
             chbBacon.Text = "Bacon";
             chbBacon.UseVisualStyleBackColor = true;
+            chbBacon.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbPineapple
             // 
@@ -178,6 +184,7 @@
             chbPineapple.TabIndex = 1;
             chbPineapple.Text = "Pineapple";
             chbPineapple.UseVisualStyleBackColor = true;
+            chbPineapple.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // chbPepperoni
             // 
@@ -189,6 +196,7 @@
             chbPepperoni.TabIndex = 0;
             chbPepperoni.Text = "Pepperoni";
             chbPepperoni.UseVisualStyleBackColor = true;
+            chbPepperoni.CheckedChanged += ChbIngredientCheckedChangedEH;
             // 
             // label2
             // 
@@ -210,6 +218,7 @@
             lsbStrangeAddOns.SelectionMode = SelectionMode.MultiSimple;
             lsbStrangeAddOns.Size = new Size(165, 148);
             lsbStrangeAddOns.TabIndex = 4;
+            lsbStrangeAddOns.SelectedIndexChanged += LsbStrangeAddOnsSelectedIndexChangedEH;
             // 
             // grpCrust
             // 
@@ -236,6 +245,7 @@
             rdoGlutenFree.TabStop = true;
             rdoGlutenFree.Text = "Gluten Free";
             rdoGlutenFree.UseVisualStyleBackColor = true;
+            rdoGlutenFree.CheckedChanged += RdoCrustCheckedChangedEH;
             // 
             // rdoStuffedCrust
             // 
@@ -248,6 +258,7 @@
             rdoStuffedCrust.TabStop = true;
             rdoStuffedCrust.Text = "Stuffed Crust";
             rdoStuffedCrust.UseVisualStyleBackColor = true;
+            rdoStuffedCrust.CheckedChanged += RdoCrustCheckedChangedEH;
             // 
             // rdoDeepDish
             // 
@@ -260,6 +271,7 @@
             rdoDeepDish.TabStop = true;
             rdoDeepDish.Text = "Deep Dish";
             rdoDeepDish.UseVisualStyleBackColor = true;
+            rdoDeepDish.CheckedChanged += RdoCrustCheckedChangedEH;
             // 
             // rdoThinCrust
             // 
@@ -272,6 +284,7 @@
             rdoThinCrust.TabStop = true;
             rdoThinCrust.Text = "Thin Crust";
             rdoThinCrust.UseVisualStyleBackColor = true;
+            rdoThinCrust.CheckedChanged += RdoCrustCheckedChangedEH;
             // 
             // grpExtraGoodies
             // 
