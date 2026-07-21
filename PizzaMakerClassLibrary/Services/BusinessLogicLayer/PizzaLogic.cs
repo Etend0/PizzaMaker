@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 
 namespace PizzaMakerClassLibrary.Services.BusinessLogicLayer
 {
-    internal class PizzaLogic
+    public class PizzaLogic
     {
         // Declare class level variables
         private PizzaDAO _pizzaDAO;
