@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PizzaMakerClassLibrary.Models;
+using PizzaMakerClassLibrary.Services.DataAccessLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +18,32 @@ namespace PizzaMakerClassLibrary.Services.BusinessLogicLayer
 {
     internal class PizzaLogic
     {
+        // Declare class level variables
+        private PizzaDAO _pizzaDAO;
+
+        /// <summary>
+        /// Default constructor for PizzaLogic
+        /// </summary>
+        public PizzaLogic()
+        {
+            // Initialize the pizzaDAO object
+            _pizzaDAO = new PizzaDAO();
+        }
+
+        /// <summary>
+        /// Add a new pizza to the current order
+        /// </summary>
+        /// <param name="newPizza"></param>
+        /// <returns></returns>
+        public (bool isValidPizza, int pizzasInOrder) AddPizzaToOrder(PizzaModel newPizza)
+        {
+            // Declare and initialize
+            int pizzas = -1;
+
+            // Call the DAO AddPizzaToOrder
+            pizzas = _pizzaDAO.AddPizzaToOrder(newPizza);
+            // Return the pizzas variables
+            return (true, pizzas);
+        }
     }
 }
