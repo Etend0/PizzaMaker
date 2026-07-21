@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Drawing;
 using System.Text;
-using System.Threading.Tasks;
 
 /*
  * Elijah Hodge
@@ -12,9 +11,9 @@ using System.Threading.Tasks;
  * Activity 4
 */
 
-namespace PizzaMaker.Models
+namespace PizzaMakerClassLibrary.Models
 {
-    internal class PizzaModel
+    public class PizzaModel
     {
         // Class Properties
         public string ClientName { get; set; }

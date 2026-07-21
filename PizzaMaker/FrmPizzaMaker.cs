@@ -6,7 +6,7 @@
  * Activity 4
 */
 
-using PizzaMaker.Models;
+using PizzaMakerClassLibrary.Models;
 
 namespace PizzaMaker
 {
