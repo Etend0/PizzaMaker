@@ -61,6 +61,7 @@
             lblPizzaPrice = new Label();
             btnResetForm = new Button();
             btnCreatePizza = new Button();
+            btnSeeFullOrder = new Button();
             grpIngredients.SuspendLayout();
             grpCrust.SuspendLayout();
             grpExtraGoodies.SuspendLayout();
@@ -364,7 +365,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(336, 19);
+            label5.Location = new Point(351, 19);
             label5.Name = "label5";
             label5.Size = new Size(123, 18);
             label5.TabIndex = 7;
@@ -374,7 +375,7 @@
             // 
             dtpDeliveryTime.CustomFormat = "MM/dd/yyyy hh:mm";
             dtpDeliveryTime.Format = DateTimePickerFormat.Custom;
-            dtpDeliveryTime.Location = new Point(336, 40);
+            dtpDeliveryTime.Location = new Point(351, 40);
             dtpDeliveryTime.Name = "dtpDeliveryTime";
             dtpDeliveryTime.Size = new Size(242, 26);
             dtpDeliveryTime.TabIndex = 8;
@@ -384,7 +385,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(336, 69);
+            label6.Location = new Point(351, 69);
             label6.Name = "label6";
             label6.Size = new Size(137, 18);
             label6.TabIndex = 9;
@@ -393,7 +394,7 @@
             // picPizzaBoxColor
             // 
             picPizzaBoxColor.BorderStyle = BorderStyle.FixedSingle;
-            picPizzaBoxColor.Location = new Point(336, 91);
+            picPizzaBoxColor.Location = new Point(351, 91);
             picPizzaBoxColor.Name = "picPizzaBoxColor";
             picPizzaBoxColor.Size = new Size(242, 78);
             picPizzaBoxColor.TabIndex = 10;
@@ -404,7 +405,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Georgia", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(336, 179);
+            label7.Location = new Point(351, 179);
             label7.Name = "label7";
             label7.Size = new Size(106, 18);
             label7.TabIndex = 11;
@@ -415,7 +416,7 @@
             lblPizzaPrice.AutoSize = true;
             lblPizzaPrice.Font = new Font("Georgia", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblPizzaPrice.ForeColor = Color.Red;
-            lblPizzaPrice.Location = new Point(448, 179);
+            lblPizzaPrice.Location = new Point(463, 179);
             lblPizzaPrice.Name = "lblPizzaPrice";
             lblPizzaPrice.Size = new Size(27, 18);
             lblPizzaPrice.TabIndex = 12;
@@ -423,7 +424,7 @@
             // 
             // btnResetForm
             // 
-            btnResetForm.Location = new Point(336, 200);
+            btnResetForm.Location = new Point(351, 200);
             btnResetForm.Name = "btnResetForm";
             btnResetForm.Size = new Size(106, 28);
             btnResetForm.TabIndex = 13;
@@ -433,18 +434,28 @@
             // 
             // btnCreatePizza
             // 
-            btnCreatePizza.Location = new Point(448, 200);
+            btnCreatePizza.Location = new Point(463, 200);
             btnCreatePizza.Name = "btnCreatePizza";
             btnCreatePizza.Size = new Size(106, 28);
             btnCreatePizza.TabIndex = 14;
             btnCreatePizza.Text = "Create Pizza";
             btnCreatePizza.UseVisualStyleBackColor = true;
             // 
+            // btnSeeFullOrder
+            // 
+            btnSeeFullOrder.Location = new Point(351, 240);
+            btnSeeFullOrder.Name = "btnSeeFullOrder";
+            btnSeeFullOrder.Size = new Size(123, 28);
+            btnSeeFullOrder.TabIndex = 15;
+            btnSeeFullOrder.Text = "See Full Order";
+            btnSeeFullOrder.UseVisualStyleBackColor = true;
+            // 
             // FrmPizzaMaker
             // 
             AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(692, 599);
+            Controls.Add(btnSeeFullOrder);
             Controls.Add(btnCreatePizza);
             Controls.Add(btnResetForm);
             Controls.Add(lblPizzaPrice);
@@ -510,5 +521,6 @@
         private Label lblPizzaPrice;
         private Button btnResetForm;
         private Button btnCreatePizza;
+        private Button btnSeeFullOrder;
     }
 }
