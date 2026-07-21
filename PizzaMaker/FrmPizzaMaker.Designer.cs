@@ -440,6 +440,7 @@
             btnCreatePizza.TabIndex = 14;
             btnCreatePizza.Text = "Create Pizza";
             btnCreatePizza.UseVisualStyleBackColor = true;
+            btnCreatePizza.Click += BtnCreatePizzaClickEH;
             // 
             // btnSeeFullOrder
             // 
@@ -449,6 +450,7 @@
             btnSeeFullOrder.TabIndex = 15;
             btnSeeFullOrder.Text = "See Full Order";
             btnSeeFullOrder.UseVisualStyleBackColor = true;
+            btnSeeFullOrder.Click += BtnSeeFullOrderClickEH;
             // 
             // FrmPizzaMaker
             // 

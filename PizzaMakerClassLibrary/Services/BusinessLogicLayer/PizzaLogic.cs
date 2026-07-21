@@ -42,7 +42,7 @@ namespace PizzaMakerClassLibrary.Services.BusinessLogicLayer
 
             // Call the DAO AddPizzaToOrder
             pizzas = _pizzaDAO.AddPizzaToOrder(newPizza);
-            // Return the pizzas variables
+            // Return the isValid and pizzas variables
             return (true, pizzas);
         }
 

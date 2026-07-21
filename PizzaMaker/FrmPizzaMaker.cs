@@ -8,6 +8,7 @@
 
 using PizzaMakerClassLibrary.Models;
 using PizzaMakerClassLibrary.Services.BusinessLogicLayer;
+using System.Drawing.Text;
 
 namespace PizzaMaker
 {
@@ -25,12 +26,14 @@ namespace PizzaMaker
             InitializeComponent();
             // Initialize the current order
             _pizza = new PizzaModel();
+            // Initialize the business logic layer
+            _pizzaLogic = new PizzaLogic();
 
             // Disable the Create Pizza button
             btnCreatePizza.Enabled = false;
             // Disable the Reset Form button
             btnResetForm.Enabled = false;
-            // Disable the See Full Order button
+            // Diable the See Full Order button
             btnSeeFullOrder.Enabled = false;
             // Update the price of the pizza
             UpdatePrice();
@@ -299,7 +302,7 @@ namespace PizzaMaker
                 // Check if the control has controls (children)
                 if (control.HasChildren)
                 {
-                    // Recursively call the Reset method using the current control
+                    // IRecursively call the Reset method using the current control
                     ResetControls(control);
                 }
             }
