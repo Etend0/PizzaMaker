@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+/*
+ * Elijah Hodge
+ * CST - 250
+ * 07/20/2026
+ * Pizza Maker
+ * Activity 4
+*/
+
+namespace PizzaMaker.Models
+{
+    internal class PizzaModel
+    {
+        // Class Properties
+        public string ClientName { get; set; }
+        public List<string> Ingredients { get; set; }
+        public List<string> StrangeAddOns { get; set; }
+        public string Crust { get; set; }
+        public int SauceQty { get; set; }
+        public int CheeseQty { get; set; }
+        public DateTime DeliveryTime { get; set; }
+        public Color PizzaBoxColor { get; set; }
+        public decimal Price { get; set; }
+
+        /// <summary>
+        /// Default Constructor for Pizza Model
+        /// </summary>
+        public PizzaModel()
+        {
+            // Declare the default properties
+            ClientName = "Unkown";
+            Ingredients = new List<string>();
+            StrangeAddOns = new List<string>();
+            Crust = "Unknown";
+            SauceQty = 0;
+            CheeseQty = 0;
+            DeliveryTime = DateTime.Now;
+            PizzaBoxColor = Color.White;
+            Price = 15m;
+        }
+    }
+}
